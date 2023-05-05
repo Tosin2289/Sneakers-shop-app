@@ -17,7 +17,7 @@ class BottomNavBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         tabBorderRadius: 16,
         onTabChange: onTabChange,
-        tabs: [
+        tabs: const [
           GButton(
             icon: Icons.home,
             text: "Shop",
