@@ -53,9 +53,6 @@ class Shop extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Expanded(child: ListView.builder(itemBuilder: ((context, index) {
-            return Container();
-          })))
         ],
       ),
     );
