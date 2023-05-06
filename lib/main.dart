@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:sneakers_shop_app/models/cart.dart';
 import 'package:sneakers_shop_app/pages/cart_page.dart';
-import 'package:sneakers_shop_app/pages/home_page.dart';
-import 'package:sneakers_shop_app/pages/intropage.dart';
 
-import 'pages/shop_page.dart';
+import 'package:sneakers_shop_app/pages/intropage.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomePage(),
+    return ChangeNotifierProvider(
+      create: ((context) => ShoeShop()),
+      builder: (context, child) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: IntroPage(),
+      ),
     );
   }
 }
