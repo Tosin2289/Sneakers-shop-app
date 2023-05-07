@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../componets/bottom_nav_bar.dart';
+import 'aboutpage.dart';
 import 'cart_page.dart';
+import 'contact_page.dart';
 import 'shop_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,6 +20,18 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       _selectedIndex = index;
     });
+  }
+
+  void _Contact() {
+    Navigator.push(context, MaterialPageRoute(builder: ((context) {
+      return ContactPage();
+    })));
+  }
+
+  void _About() {
+    Navigator.push(context, MaterialPageRoute(builder: ((context) {
+      return AboutPage();
+    })));
   }
 
   final List _pages = [const Shop(), const Cart()];
@@ -45,8 +60,8 @@ class _HomePageState extends State<HomePage> {
       ),
       drawer: Drawer(
         backgroundColor: Colors.grey[900],
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: ListView(
+          physics: NeverScrollableScrollPhysics(),
           children: [
             Column(
               children: [
@@ -63,40 +78,37 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.grey[800],
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 25.0),
-                  child: ListTile(
-                    textColor: Colors.white,
-                    leading: Icon(
-                      Icons.home,
-                      color: Colors.white,
-                    ),
-                    title: Text("Home"),
+                ListTile(
+                  onTap: _Contact,
+                  textColor: Colors.white,
+                  leading: const Icon(
+                    Icons.contact_page,
+                    color: Colors.white,
                   ),
+                  title: Text("Contact"),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 25.0),
-                  child: ListTile(
-                    textColor: Colors.white,
-                    leading: Icon(
-                      Icons.info,
-                      color: Colors.white,
-                    ),
-                    title: Text("About"),
+                ListTile(
+                  onTap: _About,
+                  textColor: Colors.white,
+                  leading: Icon(
+                    Icons.info,
+                    color: Colors.white,
                   ),
+                  title: Text("About"),
                 ),
               ],
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 25.0, bottom: 25),
-              child: ListTile(
-                textColor: Colors.white,
-                leading: Icon(
-                  Icons.logout,
-                  color: Colors.white,
-                ),
-                title: Text("Logout"),
+            SizedBox(height: 100),
+            ListTile(
+              textColor: Colors.white,
+              onTap: (() {
+                SystemNavigator.pop();
+              }),
+              leading: Icon(
+                Icons.logout,
+                color: Colors.white,
               ),
+              title: Text("Logout"),
             ),
           ],
         ),
