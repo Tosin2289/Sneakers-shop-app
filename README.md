@@ -1,16 +1,9 @@
 # sneakers_shop_app
 
-A new Flutter project.
+Sneakers shop app with flutter for the frontend and providers for the state management
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_1683343714](https://user-images.githubusercontent.com/66890167/236596601-7d287e64-7697-4a51-9c54-a4edbb4739f6.png)
+![Screenshot_1683343675](https://user-images.githubusercontent.com/66890167/236596606-eeb54374-643a-4c0a-8b76-89480bfe9bca.png)
+![Screenshot_1683343688](https://user-images.githubusercontent.com/66890167/236596607-3b83cc49-715d-4ff5-a857-d1042054c10d.png)
+![Screenshot_1683343679](https://user-images.githubusercontent.com/66890167/236596609-65986634-4aff-49f6-a911-c63b9ff70a0a.png)
+![Screenshot_1683343696](https://user-images.githubusercontent.com/66890167/236596617-94121f9e-79fe-4ce0-8c3b-973c6d005fbe.png)
